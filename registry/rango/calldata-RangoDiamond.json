@@ -31,7 +31,7 @@
             "params": { "tokenPath": "#.request.token", "nativeCurrencyAddress": "$.metadata.constants.nativeToken" },
             "visible": "always"
           },
-          { "path": "#.bridgeRequest.dstChainId", "label": "Dest. chain", "format": "chainId", "visible": "always" },
+          { "path": "#.bridgeRequest.dstChainId", "label": "Dest. chain id", "format": "raw", "visible": "always" },
           {
             "path": "#.bridgeRequest.recipient",
             "label": "Recipient",
