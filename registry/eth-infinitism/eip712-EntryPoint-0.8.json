@@ -29,20 +29,14 @@
             "label": "Account",
             "format": "addressName",
             "params": { "types": ["wallet", "eoa", "contract"], "sources": ["local", "ens"] },
-            "visible": "always"
+            "visible": "never"
           },
-          {
-            "path": "callData",
-            "label": "Action",
-            "format": "calldata",
-            "params": { "calleePath": "sender", "spenderPath": "sender" },
-            "visible": "always"
-          },
+          { "path": "callData", "label": "Action", "format": "calldata", "params": { "calleePath": "sender" }, "visible": "always" },
           { "path": "paymasterAndData", "label": "Paymaster", "format": "raw", "visible": { "ifNotIn": ["0x"] } },
-          { "path": "initCode", "label": "Account deployment", "format": "raw", "visible": { "ifNotIn": ["0x", "0x7702"] } },
-          { "path": "gasFees", "label": "Gas fees (packed)", "format": "raw", "visible": "optional" },
-          { "path": "accountGasLimits", "label": "Gas limits (packed)", "format": "raw", "visible": "optional" },
-          { "path": "preVerificationGas", "label": "Pre-verification gas", "format": "raw", "visible": "optional" },
+          { "path": "initCode", "label": "Account setup", "format": "raw", "visible": { "ifNotIn": ["0x", "0x7702"] } },
+          { "path": "gasFees", "label": "Gas fees", "format": "raw", "visible": "optional" },
+          { "path": "accountGasLimits", "label": "Gas limits", "format": "raw", "visible": "optional" },
+          { "path": "preVerificationGas", "label": "Overhead gas", "format": "raw", "visible": "optional" },
           { "path": "nonce", "label": "Nonce", "format": "raw", "visible": "never" }
         ]
       }
