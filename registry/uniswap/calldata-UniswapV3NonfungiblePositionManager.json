@@ -56,8 +56,8 @@
             "params": { "decimals": 4, "base": "%", "prefix": false },
             "visible": "always"
           },
-          { "path": "params.tickLower", "label": "Lower tick", "format": "raw", "visible": "always" },
-          { "path": "params.tickUpper", "label": "Upper tick", "format": "raw", "visible": "always" },
+          { "path": "params.tickLower", "label": "Lower tick", "format": "raw", "visible": "never" },
+          { "path": "params.tickUpper", "label": "Upper tick", "format": "raw", "visible": "never" },
           { "path": "params.recipient", "$ref": "$.display.definitions.recipient", "visible": "always" },
           { "path": "params.deadline", "$ref": "$.display.definitions.deadline", "visible": "always" },
           { "path": "@.value", "$ref": "$.display.definitions.nativeAmount", "visible": "always" }

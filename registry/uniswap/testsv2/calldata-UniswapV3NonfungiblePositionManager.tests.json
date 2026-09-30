@@ -3,11 +3,25 @@
   "descriptor": "../calldata-UniswapV3NonfungiblePositionManager.json",
   "dataProvider": {
     "tokens": {
-      "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359": { "name": "USD Coin", "symbol": "USDC", "decimals": 6 },
-      "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619": { "name": "Wrapped Ether", "symbol": "WETH", "decimals": 18 },
-      "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270": { "name": "Wrapped Polygon Ecosystem Token", "symbol": "WPOL", "decimals": 18 }
+      "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359": {
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619": {
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270": {
+        "name": "Wrapped Polygon Ecosystem Token",
+        "symbol": "WPOL",
+        "decimals": 18
+      }
     },
-    "nftCollectionNames": { "0xc36442b4a4522e871399cd717abdd847ab11fe88": "Uniswap V3 Positions NFT-V1" }
+    "nftCollectionNames": {
+      "0xc36442b4a4522e871399cd717abdd847ab11fe88": "Uniswap V3 Positions NFT-V1"
+    }
   },
   "tests": [
     {
@@ -15,19 +29,41 @@
       "rawTx": "0x02f9019181892b8506fc23ac008514f46b0400830927c094c36442b4a4522e871399cd717abdd847ab11fe8880b90164883164560000000000000000000000003c499c542cef5e3811e1192ce70d8cc03d5c33590000000000000000000000007ceb23fd6bc0add59e62ac25578270cff1b9f61900000000000000000000000000000000000000000000000000000000000001f4000000000000000000000000000000000000000000000000000000000003025000000000000000000000000000000000000000000000000000000000000306240000000000000000000000000000000000000000000000000000000005f5e1000000000000000000000000000000000000000000000000000088c78bc7da40000000000000000000000000000000000000000000000000000000000005ee3fe000000000000000000000000000000000000000000000000000881877e1bbb800000000000000000000000000dad77910dbdfde764fc21fcd4e74d71bbaca6d8d000000000000000000000000000000000000000000000000000000006abd8660c0",
       "expected": {
         "intent": "Create position",
-        "owner": "Uniswap Labs",
         "fields": [
-          { "label": "Max amount 0", "value": "100 USDC" },
-          { "label": "Max amount 1", "value": "0.0385 WETH" },
-          { "label": "Min amount 0", "value": "99.5 USDC" },
-          { "label": "Min amount 1", "value": "0.0383075 WETH" },
-          { "label": "Fee tier", "value": "0.05%" },
-          { "label": "Lower tick", "value": "197200" },
-          { "label": "Upper tick", "value": "198180" },
-          { "label": "Recipient", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" },
-          { "label": "Deadline", "value": "2026-09-30 22:00:00Z" },
-          { "label": "Native amount", "value": "0 POL" }
-        ]
+          {
+            "label": "Max amount 0",
+            "value": "100 USDC"
+          },
+          {
+            "label": "Max amount 1",
+            "value": "0.0385 WETH"
+          },
+          {
+            "label": "Min amount 0",
+            "value": "99.5 USDC"
+          },
+          {
+            "label": "Min amount 1",
+            "value": "0.0383075 WETH"
+          },
+          {
+            "label": "Fee tier",
+            "value": "0.05%"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          },
+          {
+            "label": "Deadline",
+            "value": "2026-09-30 22:00:00Z"
+          },
+          {
+            "label": "Native amount",
+            "value": "0 POL"
+          }
+        ],
+        "owner": "Uniswap Labs"
       }
     },
     {
@@ -37,13 +73,34 @@
         "intent": "Add liquidity",
         "owner": "Uniswap Labs",
         "fields": [
-          { "label": "Position", "value": "Uniswap V3 Positions NFT-V1 #2451902" },
-          { "label": "Max amount 0", "value": "20000000000000000000" },
-          { "label": "Max amount 1", "value": "5000000" },
-          { "label": "Min amount 0", "value": "19900000000000000000" },
-          { "label": "Min amount 1", "value": "4975000" },
-          { "label": "Deadline", "value": "2026-09-30 22:00:00Z" },
-          { "label": "Native amount", "value": "20 POL" }
+          {
+            "label": "Position",
+            "value": "Uniswap V3 Positions NFT-V1 #2451902"
+          },
+          {
+            "label": "Max amount 0",
+            "value": "20000000000000000000"
+          },
+          {
+            "label": "Max amount 1",
+            "value": "5000000"
+          },
+          {
+            "label": "Min amount 0",
+            "value": "19900000000000000000"
+          },
+          {
+            "label": "Min amount 1",
+            "value": "4975000"
+          },
+          {
+            "label": "Deadline",
+            "value": "2026-09-30 22:00:00Z"
+          },
+          {
+            "label": "Native amount",
+            "value": "20 POL"
+          }
         ]
       }
     },
@@ -54,13 +111,34 @@
         "intent": "Add liquidity",
         "owner": "Uniswap Labs",
         "fields": [
-          { "label": "Position", "value": "Uniswap V3 Positions NFT-V1 #2451873" },
-          { "label": "Max amount 0", "value": "50000000" },
-          { "label": "Max amount 1", "value": "19230000000000000" },
-          { "label": "Min amount 0", "value": "49750000" },
-          { "label": "Min amount 1", "value": "19133850000000000" },
-          { "label": "Deadline", "value": "2026-09-30 22:00:00Z" },
-          { "label": "Native amount", "value": "0 POL" }
+          {
+            "label": "Position",
+            "value": "Uniswap V3 Positions NFT-V1 #2451873"
+          },
+          {
+            "label": "Max amount 0",
+            "value": "50000000"
+          },
+          {
+            "label": "Max amount 1",
+            "value": "19230000000000000"
+          },
+          {
+            "label": "Min amount 0",
+            "value": "49750000"
+          },
+          {
+            "label": "Min amount 1",
+            "value": "19133850000000000"
+          },
+          {
+            "label": "Deadline",
+            "value": "2026-09-30 22:00:00Z"
+          },
+          {
+            "label": "Native amount",
+            "value": "0 POL"
+          }
         ]
       }
     },
@@ -71,11 +149,26 @@
         "intent": "Remove liquidity",
         "owner": "Uniswap Labs",
         "fields": [
-          { "label": "Position", "value": "Uniswap V3 Positions NFT-V1 #2451873" },
-          { "label": "Liquidity", "value": "1284739218372" },
-          { "label": "Min amount 0", "value": "49500000" },
-          { "label": "Min amount 1", "value": "19000000000000000" },
-          { "label": "Deadline", "value": "2026-09-30 22:00:00Z" }
+          {
+            "label": "Position",
+            "value": "Uniswap V3 Positions NFT-V1 #2451873"
+          },
+          {
+            "label": "Liquidity",
+            "value": "1284739218372"
+          },
+          {
+            "label": "Min amount 0",
+            "value": "49500000"
+          },
+          {
+            "label": "Min amount 1",
+            "value": "19000000000000000"
+          },
+          {
+            "label": "Deadline",
+            "value": "2026-09-30 22:00:00Z"
+          }
         ]
       }
     },
@@ -86,10 +179,22 @@
         "intent": "Collect from position",
         "owner": "Uniswap Labs",
         "fields": [
-          { "label": "Position", "value": "Uniswap V3 Positions NFT-V1 #2451873" },
-          { "label": "Recipient", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" },
-          { "label": "Max amount 0", "value": "340282366920938463463374607431768211455" },
-          { "label": "Max amount 1", "value": "340282366920938463463374607431768211455" }
+          {
+            "label": "Position",
+            "value": "Uniswap V3 Positions NFT-V1 #2451873"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          },
+          {
+            "label": "Max amount 0",
+            "value": "340282366920938463463374607431768211455"
+          },
+          {
+            "label": "Max amount 1",
+            "value": "340282366920938463463374607431768211455"
+          }
         ]
       }
     },
@@ -99,7 +204,12 @@
       "expected": {
         "intent": "Burn position",
         "owner": "Uniswap Labs",
-        "fields": [{ "label": "Position", "value": "Uniswap V3 Positions NFT-V1 #2451873" }]
+        "fields": [
+          {
+            "label": "Position",
+            "value": "Uniswap V3 Positions NFT-V1 #2451873"
+          }
+        ]
       }
     },
     {
@@ -109,8 +219,14 @@
         "intent": "Approve position",
         "owner": "Uniswap Labs",
         "fields": [
-          { "label": "Spender", "value": "0xF75584eF6673aD213a685a1B58Cc0330B8eA22Cf" },
-          { "label": "Position", "value": "Uniswap V3 Positions NFT-V1 #2451873" }
+          {
+            "label": "Spender",
+            "value": "0xF75584eF6673aD213a685a1B58Cc0330B8eA22Cf"
+          },
+          {
+            "label": "Position",
+            "value": "Uniswap V3 Positions NFT-V1 #2451873"
+          }
         ]
       }
     }
