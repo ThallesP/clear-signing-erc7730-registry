@@ -54,7 +54,7 @@
         "params": { "nativeCurrencyAddress": ["$.metadata.constants.addressAsEth", "$.metadata.constants.addressAsNull"] }
       },
       "bridgeTool": { "label": "Bridge", "format": "raw" },
-      "destinationChain": { "label": "To chain", "format": "chainId" },
+      "destinationChain": { "label": "To chain id", "format": "raw" },
       "bridgeReceiver": { "label": "Recipient", "format": "addressName", "params": { "types": ["eoa", "contract"], "sources": ["local", "ens"] } }
     },
     "formats": {

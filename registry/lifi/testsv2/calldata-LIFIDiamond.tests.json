@@ -3,16 +3,56 @@
   "descriptor": "../calldata-LIFIDiamond.json",
   "dataProvider": {
     "tokens": {
-      "0xdac17f958d2ee523a2206206994597c13d831ec7": { "decimals": 6, "name": "Tether USD", "symbol": "USDT" },
-      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": { "decimals": 6, "name": "USD Coin", "symbol": "USDC" },
-      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": { "decimals": 18, "name": "Wrapped Ether", "symbol": "WETH" },
-      "0xd7efb00d12c2c13131fd319336fdf952525da2af": { "symbol": "XPR", "decimals": 4, "name": "Proton" },
-      "0x06450dee7fd2fb8e39061434babcfc05599a6fb8": { "symbol": "XEN", "decimals": 18, "name": "XEN Crypto" },
-      "0xf230b790e05390fc8295f4d3f60332c93bed42e2": { "symbol": "TRX", "decimals": 6, "name": "Tronix" },
-      "0x8248270620aa532e4d64316017be5e873e37cc09": { "symbol": "DEVVE", "decimals": 18, "name": "DevvE" },
-      "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359": { "symbol": "USDC", "decimals": 6, "name": "USD Coin" },
-      "0xc2132d05d31c914a87c6611c10748aeb04b58e8f": { "symbol": "USDT0", "decimals": 6, "name": "USDT0" },
-      "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619": { "symbol": "WETH", "decimals": 18, "name": "Wrapped Ether" }
+      "0xdac17f958d2ee523a2206206994597c13d831ec7": {
+        "decimals": 6,
+        "name": "Tether USD",
+        "symbol": "USDT"
+      },
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "decimals": 6,
+        "name": "USD Coin",
+        "symbol": "USDC"
+      },
+      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": {
+        "decimals": 18,
+        "name": "Wrapped Ether",
+        "symbol": "WETH"
+      },
+      "0xd7efb00d12c2c13131fd319336fdf952525da2af": {
+        "symbol": "XPR",
+        "decimals": 4,
+        "name": "Proton"
+      },
+      "0x06450dee7fd2fb8e39061434babcfc05599a6fb8": {
+        "symbol": "XEN",
+        "decimals": 18,
+        "name": "XEN Crypto"
+      },
+      "0xf230b790e05390fc8295f4d3f60332c93bed42e2": {
+        "symbol": "TRX",
+        "decimals": 6,
+        "name": "Tronix"
+      },
+      "0x8248270620aa532e4d64316017be5e873e37cc09": {
+        "symbol": "DEVVE",
+        "decimals": 18,
+        "name": "DevvE"
+      },
+      "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359": {
+        "symbol": "USDC",
+        "decimals": 6,
+        "name": "USD Coin"
+      },
+      "0xc2132d05d31c914a87c6611c10748aeb04b58e8f": {
+        "symbol": "USDT0",
+        "decimals": 6,
+        "name": "USDT0"
+      },
+      "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619": {
+        "symbol": "WETH",
+        "decimals": 18,
+        "name": "Wrapped Ether"
+      }
     }
   },
   "tests": [
@@ -24,9 +64,18 @@
         "intent": "Swap",
         "owner": "LI.FI",
         "fields": [
-          { "label": "Amount to Send", "value": "500000 XPR" },
-          { "label": "Minimum to Receive", "value": "93522914967.046437151086561198 XEN" },
-          { "label": "Recipient", "value": "0x78b59874BF0Fb404D88D9e688fdC56eE3E085e6b" }
+          {
+            "label": "Amount to Send",
+            "value": "500000 XPR"
+          },
+          {
+            "label": "Minimum to Receive",
+            "value": "93522914967.046437151086561198 XEN"
+          },
+          {
+            "label": "Recipient",
+            "value": "0x78b59874BF0Fb404D88D9e688fdC56eE3E085e6b"
+          }
         ]
       }
     },
@@ -38,9 +87,18 @@
         "intent": "Swap",
         "owner": "LI.FI",
         "fields": [
-          { "label": "Amount to Send", "value": "56 TRX" },
-          { "label": "Minimum Amount to receive", "value": "7538051138939978" },
-          { "label": "Receiver", "value": "0xA368825594237F98cD05803027E841Aeca7e8F52" }
+          {
+            "label": "Amount to Send",
+            "value": "56 TRX"
+          },
+          {
+            "label": "Minimum Amount to receive",
+            "value": "7538051138939978"
+          },
+          {
+            "label": "Receiver",
+            "value": "0xA368825594237F98cD05803027E841Aeca7e8F52"
+          }
         ]
       }
     },
@@ -52,9 +110,18 @@
         "intent": "Swap",
         "owner": "LI.FI",
         "fields": [
-          { "label": "Amount to send", "value": "0.004691322694977235 ETH" },
-          { "label": "Minimum to Receive", "value": "327.952248630648498422 DEVVE" },
-          { "label": "Recipient", "value": "0x9db61e60E1F1Cc3e03952F8E19CC7705DCE8581b" }
+          {
+            "label": "Amount to send",
+            "value": "0.004691322694977235 ETH"
+          },
+          {
+            "label": "Minimum to Receive",
+            "value": "327.952248630648498422 DEVVE"
+          },
+          {
+            "label": "Recipient",
+            "value": "0x9db61e60E1F1Cc3e03952F8E19CC7705DCE8581b"
+          }
         ]
       }
     },
@@ -66,9 +133,18 @@
         "intent": "Swap",
         "owner": "LI.FI",
         "fields": [
-          { "label": "Amount to Send", "value": "2995 USDT" },
-          { "label": "Minimum to Receive", "value": "2904.541564 USDC" },
-          { "label": "Recipient", "value": "0x2D7d7d61978fF0b82164CC201Ec532a68f10F9c2" }
+          {
+            "label": "Amount to Send",
+            "value": "2995 USDT"
+          },
+          {
+            "label": "Minimum to Receive",
+            "value": "2904.541564 USDC"
+          },
+          {
+            "label": "Recipient",
+            "value": "0x2D7d7d61978fF0b82164CC201Ec532a68f10F9c2"
+          }
         ]
       }
     },
@@ -80,9 +156,18 @@
         "intent": "Swap",
         "owner": "LI.FI",
         "fields": [
-          { "label": "Amount to Send", "value": "0.00136 WETH" },
-          { "label": "Minimum Amount to receive", "value": "1346400000000000" },
-          { "label": "Receiver", "value": "0xa78456D70bed1938Fb26E6106922b2F370960b61" }
+          {
+            "label": "Amount to Send",
+            "value": "0.00136 WETH"
+          },
+          {
+            "label": "Minimum Amount to receive",
+            "value": "1346400000000000"
+          },
+          {
+            "label": "Receiver",
+            "value": "0xa78456D70bed1938Fb26E6106922b2F370960b61"
+          }
         ]
       }
     },
@@ -94,9 +179,18 @@
         "intent": "Swap",
         "owner": "LI.FI",
         "fields": [
-          { "label": "Amount to send", "value": "0.002098039615199859 ETH" },
-          { "label": "Minimum to Receive", "value": "4.508934 USDC" },
-          { "label": "Recipient", "value": "0x49d74da14765d2Dc73d73884bF2d1E7A49B38F18" }
+          {
+            "label": "Amount to send",
+            "value": "0.002098039615199859 ETH"
+          },
+          {
+            "label": "Minimum to Receive",
+            "value": "4.508934 USDC"
+          },
+          {
+            "label": "Recipient",
+            "value": "0x49d74da14765d2Dc73d73884bF2d1E7A49B38F18"
+          }
         ]
       }
     },
@@ -108,9 +202,18 @@
         "intent": "Swap",
         "owner": "LI.FI",
         "fields": [
-          { "label": "Amount to Send", "value": "13043924626238593" },
-          { "label": "Minimum to Receive", "value": "134119268273446086162514" },
-          { "label": "Recipient", "value": "0x751F9DCc942294F9a8E1B415ac5d00EF7E6A0aAe" }
+          {
+            "label": "Amount to Send",
+            "value": "13043924626238593"
+          },
+          {
+            "label": "Minimum to Receive",
+            "value": "134119268273446086162514"
+          },
+          {
+            "label": "Recipient",
+            "value": "0x751F9DCc942294F9a8E1B415ac5d00EF7E6A0aAe"
+          }
         ]
       }
     },
@@ -120,9 +223,18 @@
       "expected": {
         "intent": "Swap",
         "fields": [
-          { "label": "Amount to Send", "value": "10 USDC" },
-          { "label": "Minimum to Receive", "value": "9.9356 USDT0" },
-          { "label": "Recipient", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" }
+          {
+            "label": "Amount to Send",
+            "value": "10 USDC"
+          },
+          {
+            "label": "Minimum to Receive",
+            "value": "9.9356 USDT0"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          }
         ],
         "owner": "LI.FI"
       }
@@ -133,9 +245,18 @@
       "expected": {
         "intent": "Swap",
         "fields": [
-          { "label": "Amount to send", "value": "5 POL" },
-          { "label": "Minimum to Receive", "value": "0.558687 USDC" },
-          { "label": "Recipient", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" }
+          {
+            "label": "Amount to send",
+            "value": "5 POL"
+          },
+          {
+            "label": "Minimum to Receive",
+            "value": "0.558687 USDC"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          }
         ],
         "owner": "LI.FI"
       }
@@ -146,13 +267,28 @@
       "expected": {
         "intent": "Bridge",
         "fields": [
-          { "label": "Amount", "value": "10 USDC" },
-          { "label": "Min bridged", "value": "9.99 USDC" },
-          { "label": "To chain", "value": "Base" },
-          { "label": "Recipient", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" },
-          { "label": "Bridge", "value": "across" }
+          {
+            "label": "Amount",
+            "value": "10 USDC"
+          },
+          {
+            "label": "Min bridged",
+            "value": "9.99 USDC"
+          },
+          {
+            "label": "To chain id",
+            "value": "8453"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          },
+          {
+            "label": "Bridge",
+            "value": "across"
+          }
         ],
-        "interpolatedIntent": "Bridge 10 USDC to Base",
+        "interpolatedIntent": "Bridge 10 USDC to 8453",
         "owner": "LI.FI"
       }
     },
@@ -162,13 +298,28 @@
       "expected": {
         "intent": "Bridge",
         "fields": [
-          { "label": "Amount", "value": "20 POL" },
-          { "label": "Min bridged", "value": "0.000837124001233848 WETH" },
-          { "label": "To chain", "value": "Base" },
-          { "label": "Recipient", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" },
-          { "label": "Bridge", "value": "across" }
+          {
+            "label": "Amount",
+            "value": "20 POL"
+          },
+          {
+            "label": "Min bridged",
+            "value": "0.000837124001233848 WETH"
+          },
+          {
+            "label": "To chain id",
+            "value": "8453"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          },
+          {
+            "label": "Bridge",
+            "value": "across"
+          }
         ],
-        "interpolatedIntent": "Bridge 20 POL to Base",
+        "interpolatedIntent": "Bridge 20 POL to 8453",
         "owner": "LI.FI"
       }
     },
@@ -178,13 +329,28 @@
       "expected": {
         "intent": "Bridge",
         "fields": [
-          { "label": "Amount", "value": "10 USDC" },
-          { "label": "Min bridged", "value": "9.99 USDC" },
-          { "label": "To chain", "value": "BNB Smart Chain Mainnet" },
-          { "label": "Recipient", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" },
-          { "label": "Bridge", "value": "across" }
+          {
+            "label": "Amount",
+            "value": "10 USDC"
+          },
+          {
+            "label": "Min bridged",
+            "value": "9.99 USDC"
+          },
+          {
+            "label": "To chain id",
+            "value": "56"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          },
+          {
+            "label": "Bridge",
+            "value": "across"
+          }
         ],
-        "interpolatedIntent": "Bridge 10 USDC to BNB Smart Chain Mainnet",
+        "interpolatedIntent": "Bridge 10 USDC to 56",
         "owner": "LI.FI"
       }
     },
@@ -194,14 +360,32 @@
       "expected": {
         "intent": "Bridge",
         "fields": [
-          { "label": "Amount", "value": "10 USDC" },
-          { "label": "Min bridged", "value": "9.99 USDC" },
-          { "label": "Max fee", "value": "0 USDC" },
-          { "label": "To chain", "value": "Arbitrum One" },
-          { "label": "Recipient", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" },
-          { "label": "Bridge", "value": "celercircle" }
+          {
+            "label": "Amount",
+            "value": "10 USDC"
+          },
+          {
+            "label": "Min bridged",
+            "value": "9.99 USDC"
+          },
+          {
+            "label": "Max fee",
+            "value": "0 USDC"
+          },
+          {
+            "label": "To chain id",
+            "value": "42161"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          },
+          {
+            "label": "Bridge",
+            "value": "celercircle"
+          }
         ],
-        "interpolatedIntent": "Bridge 10 USDC to Arbitrum One",
+        "interpolatedIntent": "Bridge 10 USDC to 42161",
         "owner": "LI.FI"
       }
     },
@@ -211,14 +395,32 @@
       "expected": {
         "intent": "Bridge",
         "fields": [
-          { "label": "Amount", "value": "10 USDC" },
-          { "label": "Min bridged", "value": "9.99 USDC" },
-          { "label": "To chain", "value": "Arbitrum One" },
-          { "label": "Recipient", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" },
-          { "label": "Depositor", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" },
-          { "label": "Bridge", "value": "relaydepository" }
+          {
+            "label": "Amount",
+            "value": "10 USDC"
+          },
+          {
+            "label": "Min bridged",
+            "value": "9.99 USDC"
+          },
+          {
+            "label": "To chain id",
+            "value": "42161"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          },
+          {
+            "label": "Depositor",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          },
+          {
+            "label": "Bridge",
+            "value": "relaydepository"
+          }
         ],
-        "interpolatedIntent": "Bridge 10 USDC to Arbitrum One",
+        "interpolatedIntent": "Bridge 10 USDC to 42161",
         "owner": "LI.FI"
       }
     },
@@ -228,14 +430,32 @@
       "expected": {
         "intent": "Bridge",
         "fields": [
-          { "label": "Amount", "value": "20 POL" },
-          { "label": "Min bridged", "value": "2.241839 USDC" },
-          { "label": "To chain", "value": "BNB Smart Chain Mainnet" },
-          { "label": "Recipient", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" },
-          { "label": "Depositor", "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D" },
-          { "label": "Bridge", "value": "relaydepository" }
+          {
+            "label": "Amount",
+            "value": "20 POL"
+          },
+          {
+            "label": "Min bridged",
+            "value": "2.241839 USDC"
+          },
+          {
+            "label": "To chain id",
+            "value": "56"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          },
+          {
+            "label": "Depositor",
+            "value": "0xDad77910DbDFdE764fC21FCD4E74D71bBACA6D8D"
+          },
+          {
+            "label": "Bridge",
+            "value": "relaydepository"
+          }
         ],
-        "interpolatedIntent": "Bridge 20 POL to BNB Smart Chain Mainnet",
+        "interpolatedIntent": "Bridge 20 POL to 56",
         "owner": "LI.FI"
       }
     },
@@ -245,12 +465,24 @@
       "expected": {
         "intent": "Bridge",
         "fields": [
-          { "label": "Amount", "value": "800 USDC" },
-          { "label": "To chain", "value": "Ethereum Mainnet" },
-          { "label": "Recipient", "value": "0xd76e55D82E8687a0F2e166d8A8953137A9BCa331" },
-          { "label": "Bridge", "value": "across" }
+          {
+            "label": "Amount",
+            "value": "800 USDC"
+          },
+          {
+            "label": "To chain id",
+            "value": "1"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xd76e55D82E8687a0F2e166d8A8953137A9BCa331"
+          },
+          {
+            "label": "Bridge",
+            "value": "across"
+          }
         ],
-        "interpolatedIntent": "Bridge 800 USDC to Ethereum Mainnet",
+        "interpolatedIntent": "Bridge 800 USDC to 1",
         "owner": "LI.FI"
       }
     },
@@ -260,13 +492,28 @@
       "expected": {
         "intent": "Bridge",
         "fields": [
-          { "label": "Amount", "value": "15347.192825 USDC" },
-          { "label": "Max fee", "value": "0 USDC" },
-          { "label": "To chain", "value": "Base" },
-          { "label": "Recipient", "value": "0x5EBC94fD391FFdB12207ACbE5Af1d493160b3854" },
-          { "label": "Bridge", "value": "celercircle" }
+          {
+            "label": "Amount",
+            "value": "15347.192825 USDC"
+          },
+          {
+            "label": "Max fee",
+            "value": "0 USDC"
+          },
+          {
+            "label": "To chain id",
+            "value": "8453"
+          },
+          {
+            "label": "Recipient",
+            "value": "0x5EBC94fD391FFdB12207ACbE5Af1d493160b3854"
+          },
+          {
+            "label": "Bridge",
+            "value": "celercircle"
+          }
         ],
-        "interpolatedIntent": "Bridge 15347.192825 USDC to Base",
+        "interpolatedIntent": "Bridge 15347.192825 USDC to 8453",
         "owner": "LI.FI"
       }
     },
@@ -276,13 +523,28 @@
       "expected": {
         "intent": "Bridge",
         "fields": [
-          { "label": "Amount", "value": "101.646694 USDC" },
-          { "label": "To chain", "value": "Base" },
-          { "label": "Recipient", "value": "0xDCF9DA1434b6B1c7e9E9c90A20F67Bb64D2Ec375" },
-          { "label": "Depositor", "value": "0xDCF9DA1434b6B1c7e9E9c90A20F67Bb64D2Ec375" },
-          { "label": "Bridge", "value": "relaydepository" }
+          {
+            "label": "Amount",
+            "value": "101.646694 USDC"
+          },
+          {
+            "label": "To chain id",
+            "value": "8453"
+          },
+          {
+            "label": "Recipient",
+            "value": "0xDCF9DA1434b6B1c7e9E9c90A20F67Bb64D2Ec375"
+          },
+          {
+            "label": "Depositor",
+            "value": "0xDCF9DA1434b6B1c7e9E9c90A20F67Bb64D2Ec375"
+          },
+          {
+            "label": "Bridge",
+            "value": "relaydepository"
+          }
         ],
-        "interpolatedIntent": "Bridge 101.646694 USDC to Base",
+        "interpolatedIntent": "Bridge 101.646694 USDC to 8453",
         "owner": "LI.FI"
       }
     }
