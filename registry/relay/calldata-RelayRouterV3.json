@@ -2,7 +2,7 @@
   "$schema": "../../specs/erc7730-v2.schema.json",
   "context": {
     "$id": "RelayRouterV3",
-    "contract": { "deployments": [{ "chainId": 137, "address": "0xB92fe925DC43a0ECdE6c8b1a2709c170Ec4fFf4f" }] }
+    "contract": { "deployments": [{ "chainId": 137, "address": "0xb92fe925DC43a0ECdE6c8b1a2709c170Ec4fFf4f" }] }
   },
   "metadata": { "owner": "Relay", "contractName": "RelayRouterV3", "info": { "url": "https://relay.link" } },
   "display": {
