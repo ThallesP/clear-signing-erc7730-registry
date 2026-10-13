@@ -17,6 +17,7 @@
     "formats": {
       "borrow((address loanToken, address collateralToken, address oracle, address irm, uint256 lltv) marketParams, uint256 assets, uint256 shares, address onBehalf, address receiver)": {
         "intent": "Borrow from Morpho Market",
+        "interpolatedIntent": "Borrow {#.assets} ({#.shares} shares) to {#.receiver}",
         "fields": [
           {
             "path": "#.marketParams",
@@ -64,6 +65,7 @@
       },
       "repay((address loanToken, address collateralToken, address oracle, address irm, uint256 lltv) marketParams, uint256 assets, uint256 shares, address onBehalf, bytes data)": {
         "intent": "Repay on Morpho Market",
+        "interpolatedIntent": "Repay {#.assets} ({#.shares} shares) for {#.onBehalf}",
         "fields": [
           {
             "path": "#.marketParams",
@@ -105,6 +107,7 @@
       },
       "supply((address loanToken, address collateralToken, address oracle, address irm, uint256 lltv) marketParams, uint256 assets, uint256 shares, address onBehalf, bytes data)": {
         "intent": "Supply on Morpho Market",
+        "interpolatedIntent": "Supply {#.assets} ({#.shares} shares) for {#.onBehalf}",
         "fields": [
           {
             "path": "#.marketParams",
@@ -146,6 +149,7 @@
       },
       "supplyCollateral((address loanToken, address collateralToken, address oracle, address irm, uint256 lltv) marketParams, uint256 assets, address onBehalf, bytes data)": {
         "intent": "Supply Collateral on Morpho Market",
+        "interpolatedIntent": "Supply {#.assets} as collateral for {#.onBehalf}",
         "fields": [
           {
             "path": "#.marketParams",
@@ -186,6 +190,7 @@
       },
       "withdraw((address loanToken, address collateralToken, address oracle, address irm, uint256 lltv) marketParams, uint256 assets, uint256 shares, address onBehalf, address receiver)": {
         "intent": "Withdraw from Morpho Market",
+        "interpolatedIntent": "Withdraw {#.assets} ({#.shares} shares) to {#.receiver}",
         "fields": [
           {
             "path": "#.marketParams",
@@ -233,6 +238,7 @@
       },
       "withdrawCollateral((address loanToken, address collateralToken, address oracle, address irm, uint256 lltv) marketParams, uint256 assets, address onBehalf, address receiver)": {
         "intent": "Withdraw Collateral from Morpho Market",
+        "interpolatedIntent": "Withdraw {#.assets} of collateral to {#.receiver}",
         "fields": [
           {
             "path": "#.marketParams",
