@@ -20,6 +20,7 @@
       "mint((address token0,address token1,uint24 fee,int24 tickLower,int24 tickUpper,uint256 amount0Desired,uint256 amount1Desired,uint256 amount0Min,uint256 amount1Min,address recipient,uint256 deadline) params)": {
         "$id": "mint",
         "intent": "Create position",
+        "interpolatedIntent": "Create a {params.fee} position with up to {params.amount0Desired} and {params.amount1Desired}",
         "fields": [
           {
             "path": "params.amount0Desired",
@@ -66,6 +67,7 @@
       "increaseLiquidity((uint256 tokenId,uint256 amount0Desired,uint256 amount1Desired,uint256 amount0Min,uint256 amount1Min,uint256 deadline) params)": {
         "$id": "increaseLiquidity",
         "intent": "Add liquidity",
+        "interpolatedIntent": "Add liquidity to {params.tokenId}",
         "fields": [
           { "path": "params.tokenId", "$ref": "$.display.definitions.position", "visible": "always" },
           { "path": "params.amount0Desired", "label": "Max amount 0", "format": "raw", "visible": "always" },
@@ -79,6 +81,7 @@
       "decreaseLiquidity((uint256 tokenId,uint128 liquidity,uint256 amount0Min,uint256 amount1Min,uint256 deadline) params)": {
         "$id": "decreaseLiquidity",
         "intent": "Remove liquidity",
+        "interpolatedIntent": "Remove liquidity from {params.tokenId}",
         "fields": [
           { "path": "params.tokenId", "$ref": "$.display.definitions.position", "visible": "always" },
           { "path": "params.liquidity", "label": "Liquidity", "format": "raw", "visible": "always" },
@@ -90,6 +93,7 @@
       "collect((uint256 tokenId,address recipient,uint128 amount0Max,uint128 amount1Max) params)": {
         "$id": "collect",
         "intent": "Collect from position",
+        "interpolatedIntent": "Collect fees and tokens from {params.tokenId} to {params.recipient}",
         "fields": [
           { "path": "params.tokenId", "$ref": "$.display.definitions.position", "visible": "always" },
           { "path": "params.recipient", "$ref": "$.display.definitions.recipient", "visible": "always" },
@@ -100,11 +104,13 @@
       "burn(uint256 tokenId)": {
         "$id": "burn",
         "intent": "Burn position",
+        "interpolatedIntent": "Burn {tokenId}",
         "fields": [{ "path": "tokenId", "$ref": "$.display.definitions.position", "visible": "always" }]
       },
       "approve(address to,uint256 tokenId)": {
         "$id": "approve",
         "intent": "Approve position",
+        "interpolatedIntent": "Approve {to} to manage {tokenId}",
         "fields": [
           {
             "path": "to",

@@ -19,6 +19,7 @@
       "execute(address router,address token,uint256 amount,bytes commands,bytes[] inputs,uint256 deadline)": {
         "$id": "execute",
         "intent": "Swap",
+        "interpolatedIntent": "Swap {amount}",
         "fields": [
           { "path": "amount", "label": "Send", "format": "tokenAmount", "params": { "tokenPath": "token" }, "visible": "always" },
           {

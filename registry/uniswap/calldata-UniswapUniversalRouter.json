@@ -19,6 +19,7 @@
       "execute(bytes commands,bytes[] inputs,uint256 deadline)": {
         "$id": "executeWithDeadline",
         "intent": "Swap",
+        "interpolatedIntent": "Swap, sending {@.value}",
         "fields": [
           { "path": "@.value", "label": "Native amount", "format": "amount", "visible": "always" },
           { "path": "deadline", "label": "Deadline", "format": "date", "params": { "encoding": "timestamp" }, "visible": "always" },
@@ -29,6 +30,7 @@
       "execute(bytes commands,bytes[] inputs)": {
         "$id": "execute",
         "intent": "Swap",
+        "interpolatedIntent": "Swap, sending {@.value}",
         "fields": [
           { "path": "@.value", "label": "Native amount", "format": "amount", "visible": "always" },
           { "path": "commands", "label": "Commands", "visible": "never" },
