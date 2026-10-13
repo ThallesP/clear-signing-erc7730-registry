@@ -50,8 +50,7 @@
       },
       "_minAmountOut": {
         "label": "Minimum Amount to receive",
-        "format": "tokenAmount",
-        "params": { "nativeCurrencyAddress": ["$.metadata.constants.addressAsEth", "$.metadata.constants.addressAsNull"] }
+        "format": "amount"
       },
       "bridgeTool": { "label": "Bridge", "format": "raw" },
       "destinationChain": { "label": "To chain id", "format": "raw" },

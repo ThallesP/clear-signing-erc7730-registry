@@ -86,7 +86,7 @@
       "txHash": "0xdd05df1178e2c9becfa70eb62d8524b6940b3c3e5d478e40b41323370ff24e1d",
       "expected": {
         "intent": "Swap",
-        "interpolatedIntent": "Swap 56 TRX for at least 7538051138939978",
+        "interpolatedIntent": "Swap 56 TRX for at least 0.007538051138939978 ETH",
         "owner": "LI.FI",
         "fields": [
           {
@@ -95,7 +95,7 @@
           },
           {
             "label": "Minimum Amount to receive",
-            "value": "7538051138939978"
+            "value": "0.007538051138939978 ETH"
           },
           {
             "label": "Receiver",
@@ -158,7 +158,7 @@
       "txHash": "0xd4a8263ff90910c298d65160242551a9360b30737717ba7a06c390a75c56bae1",
       "expected": {
         "intent": "Swap",
-        "interpolatedIntent": "Swap 0.00136 WETH for at least 1346400000000000",
+        "interpolatedIntent": "Swap 0.00136 WETH for at least 0.0013464 ETH",
         "owner": "LI.FI",
         "fields": [
           {
@@ -167,7 +167,7 @@
           },
           {
             "label": "Minimum Amount to receive",
-            "value": "1346400000000000"
+            "value": "0.0013464 ETH"
           },
           {
             "label": "Receiver",
