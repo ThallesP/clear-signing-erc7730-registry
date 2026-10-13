@@ -9,8 +9,8 @@
     "formats": {
       "routeSingle((uint8 tokenType,bytes data) tokenIn,bytes data)": {
         "$id": "routeSingle",
-        "intent": "Swap",
-        "interpolatedIntent": "Swap {#.tokenIn.data.[32:64]}",
+        "intent": "Route tokens via Enso",
+        "interpolatedIntent": "Route {#.tokenIn.data.[32:64]} via Enso",
         "fields": [
           {
             "path": "#.tokenIn.data.[32:64]",
@@ -25,7 +25,8 @@
       },
       "routeMulti((uint8 tokenType,bytes data)[] tokensIn,bytes data)": {
         "$id": "routeMulti",
-        "intent": "Swap",
+        "intent": "Route tokens via Enso",
+        "interpolatedIntent": "Route {#.tokensIn.[].data.[32:64]} via Enso",
         "fields": [
           {
             "path": "#.tokensIn.[].data.[32:64]",
