@@ -9,8 +9,8 @@
     "formats": {
       "routeSingle((uint8 tokenType,bytes data) tokenIn,bytes data)": {
         "$id": "routeSingle",
-        "intent": "Route tokens via Enso",
-        "interpolatedIntent": "Route {#.tokenIn.data.[32:64]} via Enso",
+        "intent": "Enso route, output not shown",
+        "interpolatedIntent": "Route {#.tokenIn.data.[32:64]} via Enso, output not shown",
         "fields": [
           {
             "path": "#.tokenIn.data.[32:64]",
@@ -25,8 +25,8 @@
       },
       "routeMulti((uint8 tokenType,bytes data)[] tokensIn,bytes data)": {
         "$id": "routeMulti",
-        "intent": "Route tokens via Enso",
-        "interpolatedIntent": "Route {#.tokensIn.[].data.[32:64]} via Enso",
+        "intent": "Enso route, output not shown",
+        "interpolatedIntent": "Route {#.tokensIn.[].data.[32:64]} via Enso, output not shown",
         "fields": [
           {
             "path": "#.tokensIn.[].data.[32:64]",
@@ -36,6 +36,68 @@
             "visible": "always"
           },
           { "path": "#.tokensIn.[].tokenType", "label": "Token type", "format": "raw", "visible": { "mustMatch": [1] } },
+          { "path": "#.data", "label": "Route", "visible": "never" }
+        ]
+      },
+      "safeRouteSingle((uint8 tokenType,bytes data) tokenIn,(uint8 tokenType,bytes data) tokenOut,address receiver,bytes data)": {
+        "$id": "safeRouteSingle",
+        "intent": "Route tokens via Enso",
+        "interpolatedIntent": "Route {#.tokenIn.data.[32:64]} via Enso, at least {#.tokenOut.data.[32:64]} to {#.receiver}",
+        "fields": [
+          {
+            "path": "#.tokenIn.data.[32:64]",
+            "label": "Amount",
+            "format": "tokenAmount",
+            "params": { "tokenPath": "#.tokenIn.data.[12:32]" },
+            "visible": "always"
+          },
+          { "path": "#.tokenIn.tokenType", "label": "Token type", "format": "raw", "visible": { "mustMatch": [1] } },
+          {
+            "path": "#.tokenOut.data.[32:64]",
+            "label": "Minimum received",
+            "format": "tokenAmount",
+            "params": { "tokenPath": "#.tokenOut.data.[12:32]" },
+            "visible": "always"
+          },
+          { "path": "#.tokenOut.tokenType", "label": "Token type", "format": "raw", "visible": { "mustMatch": [1] } },
+          {
+            "path": "#.receiver",
+            "label": "Receiver",
+            "format": "addressName",
+            "params": { "types": ["eoa", "wallet"] },
+            "visible": "always"
+          },
+          { "path": "#.data", "label": "Route", "visible": "never" }
+        ]
+      },
+      "safeRouteMulti((uint8 tokenType,bytes data)[] tokensIn,(uint8 tokenType,bytes data)[] tokensOut,address receiver,bytes data)": {
+        "$id": "safeRouteMulti",
+        "intent": "Route tokens via Enso",
+        "interpolatedIntent": "Route {#.tokensIn.[].data.[32:64]} via Enso, at least {#.tokensOut.[].data.[32:64]} to {#.receiver}",
+        "fields": [
+          {
+            "path": "#.tokensIn.[].data.[32:64]",
+            "label": "Amount",
+            "format": "tokenAmount",
+            "params": { "tokenPath": "#.tokensIn.[].data.[12:32]" },
+            "visible": "always"
+          },
+          { "path": "#.tokensIn.[].tokenType", "label": "Token type", "format": "raw", "visible": { "mustMatch": [1] } },
+          {
+            "path": "#.tokensOut.[].data.[32:64]",
+            "label": "Minimum received",
+            "format": "tokenAmount",
+            "params": { "tokenPath": "#.tokensOut.[].data.[12:32]" },
+            "visible": "always"
+          },
+          { "path": "#.tokensOut.[].tokenType", "label": "Token type", "format": "raw", "visible": { "mustMatch": [1] } },
+          {
+            "path": "#.receiver",
+            "label": "Receiver",
+            "format": "addressName",
+            "params": { "types": ["eoa", "wallet"] },
+            "visible": "always"
+          },
           { "path": "#.data", "label": "Route", "visible": "never" }
         ]
       }
