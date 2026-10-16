@@ -12,10 +12,10 @@
   "display": {
     "definitions": {
       "burnAmount": { "label": "Amount", "format": "tokenAmount", "params": { "tokenPath": "burnToken" } },
-      "destination": { "label": "Dest. domain", "format": "raw" },
+      "destination": { "label": "CCTP dest. domain", "format": "raw" },
       "mintRecipient": { "label": "Mint recipient", "format": "raw" },
       "maxFee": { "label": "Max fee", "format": "tokenAmount", "params": { "tokenPath": "burnToken" } },
-      "destinationCaller": { "label": "Dest. caller", "format": "raw" }
+      "destinationCaller": { "label": "Caller (0 = anyone)", "format": "raw" }
     },
     "formats": {
       "depositForBurn(uint256 amount, uint32 destinationDomain, bytes32 mintRecipient, address burnToken, bytes32 destinationCaller, uint256 maxFee, uint32 minFinalityThreshold)": {
