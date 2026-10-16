@@ -17,7 +17,7 @@
     "formats": {
       "borrow((address loanToken, address collateralToken, address oracle, address irm, uint256 lltv) marketParams, uint256 assets, uint256 shares, address onBehalf, address receiver)": {
         "intent": "Borrow from Morpho Market",
-        "interpolatedIntent": "Borrow {#.assets} ({#.shares} shares) to {#.receiver}",
+        "interpolatedIntent": "Borrow {#.assets} ({#.shares} shares) for {#.onBehalf} to {#.receiver}",
         "fields": [
           {
             "path": "#.marketParams",
@@ -36,17 +36,17 @@
                 "params": { "types": ["wallet", "eoa", "contract", "token", "collection"] },
                 "path": "irm"
               },
-              { "label": "Lltv", "format": "raw", "path": "lltv" }
+              { "label": "Liquidation LTV", "format": "unit", "params": { "base": "%", "decimals": 16 }, "path": "lltv" }
             ]
           },
           {
-            "label": "Assets",
+            "label": "Assets (0 if shares)",
             "format": "tokenAmount",
             "params": { "tokenPath": "#.marketParams.loanToken" },
             "path": "#.assets",
             "visible": "always"
           },
-          { "label": "Shares (not a token)", "format": "raw", "path": "#.shares", "visible": "always" },
+          { "label": "Shares (0 if assets)", "format": "raw", "path": "#.shares", "visible": "always" },
           {
             "label": "On Behalf",
             "format": "addressName",
@@ -57,7 +57,7 @@
           {
             "label": "Receiver",
             "format": "addressName",
-            "params": { "types": ["eoa", "wallet"] },
+            "params": { "types": ["eoa", "wallet", "contract"] },
             "path": "#.receiver",
             "visible": "always"
           }
@@ -84,17 +84,17 @@
                 "params": { "types": ["wallet", "eoa", "contract", "token", "collection"] },
                 "path": "irm"
               },
-              { "label": "Lltv", "format": "raw", "path": "lltv" }
+              { "label": "Liquidation LTV", "format": "unit", "params": { "base": "%", "decimals": 16 }, "path": "lltv" }
             ]
           },
           {
-            "label": "Assets",
+            "label": "Assets (0 if shares)",
             "format": "tokenAmount",
             "params": { "tokenPath": "#.marketParams.loanToken" },
             "path": "#.assets",
             "visible": "always"
           },
-          { "label": "Shares (not a token)", "format": "raw", "path": "#.shares", "visible": "always" },
+          { "label": "Shares (0 if assets)", "format": "raw", "path": "#.shares", "visible": "always" },
           {
             "label": "On Behalf",
             "format": "addressName",
@@ -126,17 +126,17 @@
                 "params": { "types": ["wallet", "eoa", "contract", "token", "collection"] },
                 "path": "irm"
               },
-              { "label": "Lltv", "format": "raw", "path": "lltv" }
+              { "label": "Liquidation LTV", "format": "unit", "params": { "base": "%", "decimals": 16 }, "path": "lltv" }
             ]
           },
           {
-            "label": "Assets",
+            "label": "Assets (0 if shares)",
             "format": "tokenAmount",
             "params": { "tokenPath": "#.marketParams.loanToken" },
             "path": "#.assets",
             "visible": "always"
           },
-          { "label": "Shares (not a token)", "format": "raw", "path": "#.shares", "visible": "always" },
+          { "label": "Shares (0 if assets)", "format": "raw", "path": "#.shares", "visible": "always" },
           {
             "label": "On Behalf",
             "format": "addressName",
@@ -168,7 +168,7 @@
                 "params": { "types": ["wallet", "eoa", "contract", "token", "collection"] },
                 "path": "irm"
               },
-              { "label": "Lltv", "format": "raw", "path": "lltv" }
+              { "label": "Liquidation LTV", "format": "unit", "params": { "base": "%", "decimals": 16 }, "path": "lltv" }
             ]
           },
           {
@@ -190,7 +190,7 @@
       },
       "withdraw((address loanToken, address collateralToken, address oracle, address irm, uint256 lltv) marketParams, uint256 assets, uint256 shares, address onBehalf, address receiver)": {
         "intent": "Withdraw from Morpho Market",
-        "interpolatedIntent": "Withdraw {#.assets} ({#.shares} shares) to {#.receiver}",
+        "interpolatedIntent": "Withdraw {#.assets} ({#.shares} shares) for {#.onBehalf} to {#.receiver}",
         "fields": [
           {
             "path": "#.marketParams",
@@ -209,17 +209,17 @@
                 "params": { "types": ["wallet", "eoa", "contract", "token", "collection"] },
                 "path": "irm"
               },
-              { "label": "Lltv", "format": "raw", "path": "lltv" }
+              { "label": "Liquidation LTV", "format": "unit", "params": { "base": "%", "decimals": 16 }, "path": "lltv" }
             ]
           },
           {
-            "label": "Assets",
+            "label": "Assets (0 if shares)",
             "format": "tokenAmount",
             "params": { "tokenPath": "#.marketParams.loanToken" },
             "path": "#.assets",
             "visible": "always"
           },
-          { "label": "Shares (not a token)", "format": "raw", "path": "#.shares", "visible": "always" },
+          { "label": "Shares (0 if assets)", "format": "raw", "path": "#.shares", "visible": "always" },
           {
             "label": "On Behalf",
             "format": "addressName",
@@ -230,7 +230,7 @@
           {
             "label": "Receiver",
             "format": "addressName",
-            "params": { "types": ["eoa", "wallet"] },
+            "params": { "types": ["eoa", "wallet", "contract"] },
             "path": "#.receiver",
             "visible": "always"
           }
@@ -238,7 +238,7 @@
       },
       "withdrawCollateral((address loanToken, address collateralToken, address oracle, address irm, uint256 lltv) marketParams, uint256 assets, address onBehalf, address receiver)": {
         "intent": "Withdraw Collateral from Morpho Market",
-        "interpolatedIntent": "Withdraw {#.assets} of collateral to {#.receiver}",
+        "interpolatedIntent": "Withdraw {#.assets} of collateral for {#.onBehalf} to {#.receiver}",
         "fields": [
           {
             "path": "#.marketParams",
@@ -257,7 +257,7 @@
                 "params": { "types": ["wallet", "eoa", "contract", "token", "collection"] },
                 "path": "irm"
               },
-              { "label": "Lltv", "format": "raw", "path": "lltv" }
+              { "label": "Liquidation LTV", "format": "unit", "params": { "base": "%", "decimals": 16 }, "path": "lltv" }
             ]
           },
           {
@@ -277,7 +277,7 @@
           {
             "label": "Receiver",
             "format": "addressName",
-            "params": { "types": ["eoa", "wallet"] },
+            "params": { "types": ["eoa", "wallet", "contract"] },
             "path": "#.receiver",
             "visible": "always"
           }
