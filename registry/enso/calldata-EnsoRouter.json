@@ -32,7 +32,7 @@
             "path": "#.receiver",
             "label": "Receiver",
             "format": "addressName",
-            "params": { "types": ["eoa", "wallet"] },
+            "params": { "types": ["eoa", "wallet", "contract"] },
             "visible": "always"
           },
           { "path": "#.data", "label": "Route", "visible": "never" }
@@ -63,7 +63,7 @@
             "path": "#.receiver",
             "label": "Receiver",
             "format": "addressName",
-            "params": { "types": ["eoa", "wallet"] },
+            "params": { "types": ["eoa", "wallet", "contract"] },
             "visible": "always"
           },
           { "path": "#.data", "label": "Route", "visible": "never" }
